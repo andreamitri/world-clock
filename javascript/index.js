@@ -24,15 +24,17 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
-  // Rome
-  let romeElement = document.querySelector("#rome");
-  if (romeElement) {
-    let romeDateElement = romeElement.querySelector(".date");
-    let romeTimeElement = romeElement.querySelector(".time");
-    let romeTime = moment().tz("Europe/Rome");
+  // Tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyoTimeElement = tokyoElement.querySelector(".time");
+    let tokyoTime = moment().tz("Asia/Tokyo");
 
-    romeDateElement.innerHTML = romeTime.format("MMMM	Do YYYY");
-    romeTimeElement.innerHTML = romeTime.format("h:mm:ss [<small>]A[</small>]");
+    tokyoDateElement.innerHTML = tokyoTime.format("MMMM	Do YYYY");
+    tokyoTimeElement.innerHTML = tokyoTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
 }
 
